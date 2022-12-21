@@ -1,0 +1,10 @@
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Maria','08976568645',NOW(),9000.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Chris','08976568645',NOW(),9000.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Ramona','18976568642',NOW(),9500.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Mariana','11976568645',NOW(),8000.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Victor','28976568645',NOW(),9000.00,0);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Stefany','228976568645',NOW(),8000.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Geovana','00976568645',NOW(),8800.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Nathalia','08976568645',NOW(),10000.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Henrique','08976568642',NOW(),9000.00,3);
+INSERT INTO tb_client(name,cpf,birth_date,income,children) VALUES ('Igor','98976568645',NOW(),9000.00,3);
