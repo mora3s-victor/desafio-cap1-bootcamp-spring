@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.continuousdevelopment.desafiocap1.services.exceptions.DatabaseException;
 import com.continuousdevelopment.desafiocap1.services.exceptions.ResourceNotFoundException;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,5 +24,18 @@ public class ResourceExceptionHandler {
 		err.setMessage(e.getMessage());
 		err.setPath(request.getRequestURI());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
+	}
+	
+	@ExceptionHandler(DatabaseException.class)
+	public ResponseEntity<StandardError> database(DatabaseException e, HttpServletRequest request){
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		
+		StandardError err = new StandardError();
+		err.setTimestamp(Instant.now());
+		err.setStatus(status.value());
+		err.setError("Integrity violation");
+		err.setMessage(e.getMessage());
+		err.setPath(request.getRequestURI());
+		return ResponseEntity.status(status).body(err);
 	}
 }
